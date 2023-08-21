@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Newton's Basin Visualization</title>
+  </head>
+  <style>
+    table {
+      font-family: arial, sans-serif;
+      border-collapse: collapse;
+      width: 100%;
+    }
+    
+    td, th {
+      border: 1px solid #dddddd;
+      text-align: left;
+      padding: 8px;
+    }
+    
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    
+  <body>
+    <main>
+        
+        <canvas id="Canvas" width="500" height="500" style="border:1px solid #000000;"></canvas>
+
+        <h1>Newton's Basin Visualization</h1> 
+        <h3>Roots</h3> 
+        <table id = "rootsTable">
+          <thead>
+            <tr>
+              <th>x</th>
+              <th>y</th>
+              <th>multiplicity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td contenteditable='true'>0</td>
+              <td contenteditable='true'>1</td>
+              <td contenteditable='true'>1</td>
+            </tr>
+            <tr>
+              <td contenteditable='true'>0</td>
+              <td contenteditable='true'>-1</td>
+              <td contenteditable='true'>1</td>
+            </tr>
+            <tr>
+              <td contenteditable='true'>1</td>
+              <td contenteditable='true'>0</td>
+              <td contenteditable='true'>1</td>
+            </tr>
+            <tr>
+              <td contenteditable='true'>-1</td>
+              <td contenteditable='true'>0</td>
+              <td contenteditable='true'>1</td>
+            </tr>
+          </tbody>
+        </table>
+        <button id = "buttonAddRow" type="button">Add root</button>
+        <button id = "buttonRemoveRow" type="button">Remove root</button>
+
+        <h3>Coordinate Window</h3> 
+        <table id = "coordinateWindow">
+          <thead>
+            <tr>
+              <th>x Lower</th>
+              <th>x Upper</th>
+              <th>y Lower</th>
+              <th>y Upper</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id = "xLower" contenteditable='true'>-5</td>
+              <td id = "xUpper" contenteditable='true'>5</td>
+              <td id = "yLower" contenteditable='true'>-5</td>
+              <td id = "yUpper" contenteditable='true'>5</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3>Canvas Window</h3> 
+        <table id = "canvasWindow">
+          <thead>
+            <tr>
+              <th>Height</th>
+              <th>Width</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td id ="height" contenteditable='true'>500</td>
+              <td id ="width" contenteditable='true'>500</td>
+            </tr>
+          </tbody>
+        </table>
+        
+        <div>
+          <button id = "buttonSubmit" type="button">Submit</button>
+        </div>
+
+
+
+        
+
+        
+    </main>
+  </body>
+  <script src="index.js"></script>
+  <script src="NewtonBasin.js"></script>
+</html>
